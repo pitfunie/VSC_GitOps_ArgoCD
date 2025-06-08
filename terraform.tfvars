@@ -1,0 +1,5 @@
+account_name = "aft1-example"
+email = "root.mycloud+aft1-example@gmail.com"
+organizational_unit = "Sandbox"
+sso_user_name = "AdminUser"
+iam_role_name = "AWSControlTowerExecution"
