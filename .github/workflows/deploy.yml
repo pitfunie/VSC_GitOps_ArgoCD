@@ -1,26 +1,20 @@
----
 name: Terraform Deployment
-
-on:
+'on':
   push:
     branches:
-      - main  # Runs when changes are pushed to the main branch
-
+      - main
 jobs:
   terraform:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
-
       - name: Initialize Terraform
         run: terraform init
-
       - name: Plan Terraform Changes
         run: terraform plan -out=tfplan
-
       - name: Apply Terraform Changes
         run: terraform apply -auto-approve tfplan
+        
